@@ -216,7 +216,7 @@ func (b *Birc) doSend() {
 			b.i.Cmd.Action(msg.Channel, username+msg.Text)
 		} else {
 			b.Log.Debugf("Sending to channel %s", msg.Channel)
-			b.i.Cmd.Message(msg.Channel, username+msg.Text)
+			b.i.Cmd.Message(msg.Channel, msg.txt+username)
 		}
 	}
 }
